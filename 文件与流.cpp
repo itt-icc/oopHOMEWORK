@@ -1,185 +1,185 @@
 /*
-±à³ÌÊµÏÖÒÔÏÂÊı¾İÊäÈë/Êä³ö¡£
-(1£©ÒÔ×ó¶ÔÆë·½Ê½Êä³öÕûÊı£¬Óò¿íÎª12£»
-(2£©ÒÔ°Ë½øÖÆ¡¢Ê®½øÖÆ¡¢Ê®Áù½øÖÆÊäÈë/Êä³öÕûÊı£»
-(3£©ÊµÏÖ¸¡µãÊıµÄÖ¸Êı¸ñÊ½ºÍ¶¨µã¸ñÊ½µÄÊäÈë/Êä³ö£¬²¢Ö¸¶¨¾«¶È£»
-(4£©°Ñ×Ö·û´®¶ÁÈë×Ö·ûĞÍÊı×é±äÁ¿ÖĞ£¬´Ó¼üÅÌÊäÈë£¬ÒªÇóÊäÈë´®µÄ¿Õ¸ñÒ²È«²¿¶ÁÈë£¬ÒÔ»Ø³µ·û½áÊø¡£
+ç¼–ç¨‹å®ç°ä»¥ä¸‹æ•°æ®è¾“å…¥/è¾“å‡ºã€‚
+(1ï¼‰ä»¥å·¦å¯¹é½æ–¹å¼è¾“å‡ºæ•´æ•°ï¼ŒåŸŸå®½ä¸º12ï¼›
+(2ï¼‰ä»¥å…«è¿›åˆ¶ã€åè¿›åˆ¶ã€åå…­è¿›åˆ¶è¾“å…¥/è¾“å‡ºæ•´æ•°ï¼›
+(3ï¼‰å®ç°æµ®ç‚¹æ•°çš„æŒ‡æ•°æ ¼å¼å’Œå®šç‚¹æ ¼å¼çš„è¾“å…¥/è¾“å‡ºï¼Œå¹¶æŒ‡å®šç²¾åº¦ï¼›
+(4ï¼‰æŠŠå­—ç¬¦ä¸²è¯»å…¥å­—ç¬¦å‹æ•°ç»„å˜é‡ä¸­ï¼Œä»é”®ç›˜è¾“å…¥ï¼Œè¦æ±‚è¾“å…¥ä¸²çš„ç©ºæ ¼ä¹Ÿå…¨éƒ¨è¯»å…¥ï¼Œä»¥å›è½¦ç¬¦ç»“æŸã€‚
 */
 
-//#include<iostream>
-//#include<string>
-//using namespace std;
-//
-////(1)
-//void f1()
-//{
-//	long a = 234;
-//	double b = 2345.67890;
-//	char c[100];
-//	cout.fill('*');   //×ó¶ÔÆëµÄ·½Ê½
-//	cout.flags(ios_base::left);
-//	cout.width(12);
-//	cout << a << endl;
-//}
-//
-////(2)
-//void f2()
-//{
-//	cout.flags(ios::hex);// ÉèÖÃ»º³åÇøµÄ·½Ê½¡£
-//	cout << 234 << '\t';
-//	cout.flags(ios::dec);
-//	cout << 234 << '\t';
-//	cout.flags(ios::oct);
-//	cout << 234 << endl;
-//}
-//
-////(3)
-//void f3()
-//{
-//	double b = 16541356.65135165;
-//	cout.flags(ios::scientific);
-//	cout << b << '\t';
-//	cout.flags(ios::fixed);
-//	cout << b << endl;
-//}
-//
-//void f4()
-//{
-//	char c[100];
-//	cin.get(c,100);
-//	cout << c << endl;
-//}
-//
-//int main()
-//{
-//
-//	f1();
-//	f2();
-//	f3();
-//	f4();
-//	return 0;
-//}
+#include<iostream>
+#include<string>
+using namespace std;
+
+//(1)
+void f1()
+{
+	long a = 234;
+	double b = 2345.67890;
+	char c[100];
+	cout.fill('*');   //å·¦å¯¹é½çš„æ–¹å¼
+	cout.flags(ios_base::left);
+	cout.width(12);
+	cout << a << endl;
+}
+
+//(2)
+void f2()
+{
+	cout.flags(ios::hex);// è®¾ç½®ç¼“å†²åŒºçš„æ–¹å¼ã€‚
+	cout << 234 << '\t';
+	cout.flags(ios::dec);
+	cout << 234 << '\t';
+	cout.flags(ios::oct);
+	cout << 234 << endl;
+}
+
+//(3)
+void f3()
+{
+	double b = 16541356.65135165;
+	cout.flags(ios::scientific);
+	cout << b << '\t';
+	cout.flags(ios::fixed);
+	cout << b << endl;
+}
+
+void f4()
+{
+	char c[100];
+	cin.get(c,100);
+	cout << c << endl;
+}
+
+int main()
+{
+
+	f1();
+	f2();
+	f3();
+	f4();
+	return 0;
+}
 
 
 
 
 
 
-//#include<iostream>
-//#include <fstream>
-//
-//using namespace std;
-//
-//class dog
-//{
-//public:
-//	dog(int weight, long days) :itsWeight(weight),
-//		itsNumberDaysAlive(days) {}
-//	~dog() {}
-//
-//	int GetWeight()const { return itsWeight; }
-//	void SetWeight(int weight) { itsWeight = weight; }
-//
-//	long GetDaysAlive()const { return itsNumberDaysAlive; }
-//	void SetDaysAlive(long days) { itsNumberDaysAlive = days; }
-//
-//private:
-//	int itsWeight;
-//	long itsNumberDaysAlive;
-//};
-//
-//int main() // returns 1 on error
-//{
-//	char fileName[80];
-//
-//	cout << "Please enter the file name: ";
-//	cin >> fileName;
-//	ofstream fout(fileName);
-//	// ofstream fout(fileName,ios::binary);
-//	if (!fout)
-//	{
-//		cout << "Unable to open " << fileName << " for writing./n";
-//		return(1);
-//	}
-//
-//	dog Dog1(5, 10);
-//	fout.write((char*)&Dog1, sizeof Dog1);
-//
-//	fout.close();
-//
-//	ifstream fin(fileName);
-//	// ifstream fin(fileName,ios::binary);
-//	if (!fin)
-//	{
-//		cout << "Unable to open " << fileName << " for reading./n";
-//		return(1);
-//	}
-//
-//	dog Dog2(2, 2);
-//
-//	cout << "Dog2 weight: " << Dog2.GetWeight() << endl;
-//	cout << "Dog2 days: " << Dog2.GetDaysAlive() << endl;
-//
-//	fin.read((char*)&Dog2, sizeof Dog2);
-//
-//	cout << "Dog2 weight: " << Dog2.GetWeight() << endl;
-//	cout << "Dog2 days: " << Dog2.GetDaysAlive() << endl;
-//	fin.close();
-//	return 0;
-//}
+#include<iostream>
+#include <fstream>
 
-//#include<fstream>
-//#include<iostream>
-//#include<cstdlib>
-//#include<cstring>
-//using namespace std;
-//struct student
-//{
-//	int num;
-//	char name[20];
-//	float score;
-//};
-//int main()
-//{
-//	student stud[5] =
-//	{ 1001,"Li",85,
-//	 1002,"Fun",97.5,
-//	 1003,"Wang",98,
-//	 1004,"Tan",76.5,
-//	 1005,"Ling",96 };
-//	fstream iofile("mystd.dat", ios::in | ios::out | ios::binary);
-//	//ÓÃfstreamÀà¶¨ÒåÊäÈëÊä³ö¶ş½øÖÆÎÄ¼şÁ÷¶ÔÏóiofile
-//	if (!iofile)
-//	{
-//		cerr << "open error!" << endl;
-//		abort();
-//	}
-//	for (int i = 0; i < 5; i++)	//Ïñ´ÅÅÌÖĞÊäÈë5¸öÑ§ÉúµÄÊı¾İ 
-//	{
-//		iofile.write((char*)&stud[i], sizeof(stud[i]));
-//	}
-//	student stud1[5];		//ÓÃÀ´´æ·Å´Ó´ÅÅÌÎÄ¼ş¶ÁÈëµÄÊı¾İ
-//	for (int i = 0; i < 5; i += 2)
-//	{
-//		iofile.seekg(i * sizeof(stud[i]), ios::beg);//¶¨Î»ÓÚµÚ0£¬2£¬4Ñ§ÉúÊı¾İ¿ªÍ·
-//		iofile.read((char*)&stud1[i], sizeof(stud1[0]));
-//		//ÏÈºó¶ÁÈë3¸öÑ§ÉúµÄÊı¾İ£¬´æ·ÅÔÚstud1[0], stud1[1],stud1[2]ÖĞ
-//		cout << stud1[i].num << " " << stud1[i].name << " " << stud1[i].score << endl;
-//		//Êä³ö stud1[0], stud1[1],stud1[2]¸÷³ÉÔ±µÄÖµ 
-//	}
-//	cout << endl;
-//	//ĞŞ¸ÄµÚ3¸öÑ§Éú£¨´Ó0¿ªÊ¼£©µÄÊı¾İ 
-//	stud[2].num = 1012;
-//	strcpy_s(stud[2].name, "niubi");
-//	stud[2].score = 100;
-//	iofile.seekp(2 * sizeof(stud[0]), ios::beg);		//¶¨Î»µ½µÚÈı¸öÊı¾İµÄ¿ªÍ· 
-//	iofile.write((char*)&stud[2], sizeof(stud[2])); //¸üĞÂµÚÈı¸öÑ§ÉúµÄÊı¾İ
-//	iofile.seekg(0, ios::beg);			//´ÓĞÂ¶¨Î»ÓÚÎÄ¼ş¿ªÍ·
-//	for (int i = 0; i < 5; i++)
-//	{
-//		iofile.read((char*)&stud[i], sizeof(stud[i]));//¶ÁÈë5¸öÑ§ÉúµÄÊı¾İ
-//		cout << stud[i].num << " " << stud[i].name << " " << stud[i].score << endl;
-//	}
-//	iofile.close();
-//	return 0;
-//}
+using namespace std;
+
+class dog
+{
+public:
+	dog(int weight, long days) :itsWeight(weight),
+		itsNumberDaysAlive(days) {}
+	~dog() {}
+
+	int GetWeight()const { return itsWeight; }
+	void SetWeight(int weight) { itsWeight = weight; }
+
+	long GetDaysAlive()const { return itsNumberDaysAlive; }
+	void SetDaysAlive(long days) { itsNumberDaysAlive = days; }
+
+private:
+	int itsWeight;
+	long itsNumberDaysAlive;
+};
+
+int main() // returns 1 on error
+{
+	char fileName[80];
+
+	cout << "Please enter the file name: ";
+	cin >> fileName;
+	ofstream fout(fileName);
+	// ofstream fout(fileName,ios::binary);
+	if (!fout)
+	{
+		cout << "Unable to open " << fileName << " for writing./n";
+		return(1);
+	}
+
+	dog Dog1(5, 10);
+	fout.write((char*)&Dog1, sizeof Dog1);
+
+	fout.close();
+
+	ifstream fin(fileName);
+	// ifstream fin(fileName,ios::binary);
+	if (!fin)
+	{
+		cout << "Unable to open " << fileName << " for reading./n";
+		return(1);
+	}
+
+	dog Dog2(2, 2);
+
+	cout << "Dog2 weight: " << Dog2.GetWeight() << endl;
+	cout << "Dog2 days: " << Dog2.GetDaysAlive() << endl;
+
+	fin.read((char*)&Dog2, sizeof Dog2);
+
+	cout << "Dog2 weight: " << Dog2.GetWeight() << endl;
+	cout << "Dog2 days: " << Dog2.GetDaysAlive() << endl;
+	fin.close();
+	return 0;
+}
+
+#include<fstream>
+#include<iostream>
+#include<cstdlib>
+#include<cstring>
+using namespace std;
+struct student
+{
+	int num;
+	char name[20];
+	float score;
+};
+int main()
+{
+	student stud[5] =
+	{ 1001,"Li",85,
+	 1002,"Fun",97.5,
+	 1003,"Wang",98,
+	 1004,"Tan",76.5,
+	 1005,"Ling",96 };
+	fstream iofile("mystd.dat", ios::in | ios::out | ios::binary);
+	//ç”¨fstreamç±»å®šä¹‰è¾“å…¥è¾“å‡ºäºŒè¿›åˆ¶æ–‡ä»¶æµå¯¹è±¡iofile
+	if (!iofile)
+	{
+		cerr << "open error!" << endl;
+		abort();
+	}
+	for (int i = 0; i < 5; i++)	//åƒç£ç›˜ä¸­è¾“å…¥5ä¸ªå­¦ç”Ÿçš„æ•°æ® 
+	{
+		iofile.write((char*)&stud[i], sizeof(stud[i]));
+	}
+	student stud1[5];		//ç”¨æ¥å­˜æ”¾ä»ç£ç›˜æ–‡ä»¶è¯»å…¥çš„æ•°æ®
+	for (int i = 0; i < 5; i += 2)
+	{
+		iofile.seekg(i * sizeof(stud[i]), ios::beg);//å®šä½äºç¬¬0ï¼Œ2ï¼Œ4å­¦ç”Ÿæ•°æ®å¼€å¤´
+		iofile.read((char*)&stud1[i], sizeof(stud1[0]));
+		//å…ˆåè¯»å…¥3ä¸ªå­¦ç”Ÿçš„æ•°æ®ï¼Œå­˜æ”¾åœ¨stud1[0], stud1[1],stud1[2]ä¸­
+		cout << stud1[i].num << " " << stud1[i].name << " " << stud1[i].score << endl;
+		//è¾“å‡º stud1[0], stud1[1],stud1[2]å„æˆå‘˜çš„å€¼ 
+	}
+	cout << endl;
+	//ä¿®æ”¹ç¬¬3ä¸ªå­¦ç”Ÿï¼ˆä»0å¼€å§‹ï¼‰çš„æ•°æ® 
+	stud[2].num = 1012;
+	strcpy_s(stud[2].name, "niubi");
+	stud[2].score = 100;
+	iofile.seekp(2 * sizeof(stud[0]), ios::beg);		//å®šä½åˆ°ç¬¬ä¸‰ä¸ªæ•°æ®çš„å¼€å¤´ 
+	iofile.write((char*)&stud[2], sizeof(stud[2])); //æ›´æ–°ç¬¬ä¸‰ä¸ªå­¦ç”Ÿçš„æ•°æ®
+	iofile.seekg(0, ios::beg);			//ä»æ–°å®šä½äºæ–‡ä»¶å¼€å¤´
+	for (int i = 0; i < 5; i++)
+	{
+		iofile.read((char*)&stud[i], sizeof(stud[i]));//è¯»å…¥5ä¸ªå­¦ç”Ÿçš„æ•°æ®
+		cout << stud[i].num << " " << stud[i].name << " " << stud[i].score << endl;
+	}
+	iofile.close();
+	return 0;
+}
