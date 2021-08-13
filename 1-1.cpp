@@ -1,101 +1,101 @@
-//#include<iostream>
-//#include<string.h>
-//using namespace std;
-//class Circle { 
-//private:
-//	double r_ = 0;
-//	double pai_ = 3.1415926;
-//public:
-//	double getR()
-//	{
-//		return r_;
-//	}
-//	void setR(double r)
-//	{
-//		r_ = r;
-//	}
-//	double getArea()
-//	{
-//		return pai_ * r_ * r_;
-//	}
-//};
-//class Box
-//{
-//private:
-//	double x;
-//	double y;
-//	double z;
-//public:
-//	void get_value()
-//	{
-//		cin >> x >> y >> z;
-//	}
-//	void display()
-//	{
-//		cout << x * y * z << endl;
-//	}
-//};
-//class Student
-//{
-//private:
-//	int id;
-//	string name;
-//	char sex;
-//public:
-//	void display()
-//	{
-//		cout << "num:" << id << endl;
-//		cout << "name:" << name << endl;
-//		cout << "sex:" << sex << endl;
-//		cout << endl;
-//	}
-//	Student(int id_, string name_, char sex_)
-//	{
-//		cout << "Constructor called." << endl;
-//		id = id_;
-//		name = name_;
-//		sex = sex_;
-//	}
-//	~Student()
-//	{
-//		cout << "Destructor called." << endl;
-//	}
-//};
-//
-//enum CPU_rank { P1 = 1, P2, P3, P4, P5, P6, P7 };
-//class CPU
-//{
-//private:
-//	CPU_rank Rank;
-//	int frequency;
-//	double voltage;
-//public:
-//	CPU(CPU_rank rank_=P1 ,int f=2,double v=100)
-//	{
-//		cout << "create a CPU!" << endl;
-//		Rank = rank_;
-//		frequency = f;
-//		voltage = v;
-//	}
-//	CPU(const CPU & cpu)
-//	{
-//		cout << "copy create a CPU!" << endl;
-//		Rank = cpu.Rank;
-//		frequency = cpu.frequency;
-//		voltage = cpu.voltage;
-//	}
-//	~CPU()
-//	{
-//		cout << "destruct a CPU!" << endl;
-//	}
-//	void showinfo()
-//	{
-//		cout << "rank:" << Rank << endl;
-//		cout << "frequency:" << frequency << endl;
-//		cout << "voltage:" << voltage << endl;
-//
-//	}
-//};
+#include<iostream>
+#include<string.h>
+using namespace std;
+class Circle { 
+private:
+	double r_ = 0;
+	double pai_ = 3.1415926;
+public:
+	double getR()
+	{
+		return r_;
+	}
+	void setR(double r)
+	{
+		r_ = r;
+	}
+	double getArea()
+	{
+		return pai_ * r_ * r_;
+	}
+};
+class Box
+{
+private:
+	double x;
+	double y;
+	double z;
+public:
+	void get_value()
+	{
+		cin >> x >> y >> z;
+	}
+	void display()
+	{
+		cout << x * y * z << endl;
+	}
+};
+class Student
+{
+private:
+	int id;
+	string name;
+	char sex;
+public:
+	void display()
+	{
+		cout << "num:" << id << endl;
+		cout << "name:" << name << endl;
+		cout << "sex:" << sex << endl;
+		cout << endl;
+	}
+	Student(int id_, string name_, char sex_)
+	{
+		cout << "Constructor called." << endl;
+		id = id_;
+		name = name_;
+		sex = sex_;
+	}
+	~Student()
+	{
+		cout << "Destructor called." << endl;
+	}
+};
+
+enum CPU_rank { P1 = 1, P2, P3, P4, P5, P6, P7 };
+class CPU
+{
+private:
+	CPU_rank Rank;
+	int frequency;
+	double voltage;
+public:
+	CPU(CPU_rank rank_=P1 ,int f=2,double v=100)
+	{
+		cout << "create a CPU!" << endl;
+		Rank = rank_;
+		frequency = f;
+		voltage = v;
+	}
+	CPU(const CPU & cpu)
+	{
+		cout << "copy create a CPU!" << endl;
+		Rank = cpu.Rank;
+		frequency = cpu.frequency;
+		voltage = cpu.voltage;
+	}
+	~CPU()
+	{
+		cout << "destruct a CPU!" << endl;
+	}
+	void showinfo()
+	{
+		cout << "rank:" << Rank << endl;
+		cout << "frequency:" << frequency << endl;
+		cout << "voltage:" << voltage << endl;
+
+	}
+};
 //
 ////
 //////int main()
@@ -105,7 +105,7 @@
 //////	box2.display();
 //////	return 0;
 //////}
-/////* ÇëÔÚÕâÀïÌîĞ´´ğ°¸ */
+/////* è¯·åœ¨è¿™é‡Œå¡«å†™ç­”æ¡ˆ */
 //////int main()
 //////{
 //////	Student stud1(10010, "Wang_li", 'f');
@@ -115,189 +115,189 @@
 //////	return 0;
 //////}
 ////
-//int main()
+int main()
+{
+	CPU a(P6, 3, 300);
+
+	cout << "cpu a's parameter" << endl;
+	a.showinfo(); //æ˜¾ç¤ºæ€§èƒ½å‚æ•°
+
+	CPU b;
+	cout << "cpu b's parameter" << endl;
+	b.showinfo(); //æ˜¾ç¤ºæ€§èƒ½å‚æ•°
+
+	CPU c(a);
+	cout << "cpu c's parameter" << endl;
+	c.showinfo(); //æ˜¾ç¤ºæ€§èƒ½å‚æ•°
+}
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+class A {
+private:
+	int a=0;
+	//const int b;
+public:
+	A(){ cout << "A::default constructer!\n"; };
+	A(int _a):a(_a) { cout << "A::constructer!\n"; };
+
+	void f1() { cout << "A::f1()"; };
+	static void f2() {
+		cout << "A::f2()"; };
+	~A() { cout << "A::default deconstructer!\n"; };
+
+};
+
+class B:public A
+{
+public:
+
+	int b=0;
+	A aa=10;
+public:
+	B()  { cout << "B::default constructer!\n"; };
+	~B() { cout << "B::default deconstructer!\n"; };
+
+};
+
+//int x=0;
+//
+//int&  h()
 //{
-//	CPU a(P6, 3, 300);
-//
-//	cout << "cpu a's parameter" << endl;
-//	a.showinfo(); //ÏÔÊ¾ĞÔÄÜ²ÎÊı
-//
-//	CPU b;
-//	cout << "cpu b's parameter" << endl;
-//	b.showinfo(); //ÏÔÊ¾ĞÔÄÜ²ÎÊı
-//
-//	CPU c(a);
-//	cout << "cpu c's parameter" << endl;
-//	c.showinfo(); //ÏÔÊ¾ĞÔÄÜ²ÎÊı
+//	return  x;
 //}
 
-//#include<iostream>
-//#include<string>
-//using namespace std;
+void main()
+{
+	//A* a = new A[2];
+	//delete[] a;
 
-//class A {
-//private:
-//	int a=0;
-//	//const int b;
-//public:
-//	A(){ cout << "A::default constructer!\n"; };
-//	A(int _a):a(_a) { cout << "A::constructer!\n"; };
-//
-//	void f1() { cout << "A::f1()"; };
-//	static void f2() {
-//		cout << "A::f2()"; };
-//	~A() { cout << "A::default deconstructer!\n"; };
-//
-//};
-//
-//class B:public A
-//{
-//public:
-//
-//	int b=0;
-//	A aa=10;
-//public:
-//	B()  { cout << "B::default constructer!\n"; };
-//	~B() { cout << "B::default deconstructer!\n"; };
-//
-//};
-//
-////int x=0;
-////
-////int&  h()
-////{
-////	return  x;
-////}
-//
-//void main()
-//{
-//	//A* a = new A[2];
-//	//delete[] a;
-//
-//	//h() = 100;
-//	//cout << x << endl;
-//
-//	//cout << sizeof(B) << endl;
-//	//cout << sizeof(A) << endl;
-//	//A a(10);
-//	B b;
-//
-//}
+	//h() = 100;
+	//cout << x << endl;
 
-//class A {
-//public:
-// void foo() {
-//		cout << "A" << endl;
-//	}
-//};
-//class B :public A{
-//public:
-// void foo() {
-//		cout << "B" << endl;
-//	}
-//};
-//int main()
-//{
-//	A* a ;
-//	B b;
-//	a = &b;
-//	a->foo(); //½á¹ûÎªB
-//	return 0;
-//}
+	//cout << sizeof(B) << endl;
+	//cout << sizeof(A) << endl;
+	//A a(10);
+	B b;
 
-//class Shape {
-//protected:
-//	int width, height;
-//public:
-//	Shape(int a = 0, int b = 0)
-//	{
-//		width = a;
-//		height = b;
-//	}
-//	int area()
-//	{
-//		cout << "Parent class area :" << endl;
-//		return 0;
-//	}
-//	virtual ~Shape() { cout << "shape::decontor!\n"; };
-//};
-//class Rectangle : public Shape {
-//public:
-//	Rectangle(int a = 0, int b = 0) :Shape(a, b) { }
-//	virtual int area()
-//	{
-//		cout << "Rectangle class area :" << endl;
-//		return (width * height);
-//	}
-//	 ~Rectangle() { cout << "Rec::decontor!\n"; };
-//};
-//class Triangle : public Shape {
-//public:
-//	Triangle(int a = 0, int b = 0) :Shape(a, b) { }
-//	virtual int area()
-//	{
-//		cout << "Triangle class area :" << endl;
-//		return (width * height / 2);
-//	}
-//	 ~Triangle() { cout << "Tri::decontor!\n"; };
-//};
-//
-//void foo(int a, int b)
-//{
-//	cout << 1 << endl;
-//}
-//
-//void foo(double a, double b)
-//{
-//	cout << 2 << endl;
-//}
-//
-//int main()
-//{
-//	Shape* shape=new Rectangle(10, 7);
-//	shape->area();
-//	delete shape;
-//
-//	foo(1, 2.0);
-//	return 0;
-//}
+}
 
-//#include <iostream>
-//#include <exception>
-//using namespace std;
-//
-//struct MyException : public exception
-//{
-//    const char* what() const throw ()
-//    {
-//        return "C++ Exception";
-//    }
-//};
-//
-//class ex :public exception
-//{
-//
-//};
-//
-//int main()
-//{
-//    try
-//    {
-//        throw MyException();
-//    }
-//
-//    catch (ex& e)
-//    {
-//        //ÆäËûµÄ´íÎó
-//        cout << 1 << endl;
-//    }
-//
-//    catch (...)//¿ÉÒÔ²¶×½ËùÓĞÀàĞÍµÄÒì³£Çé¿ö
-//    {
-//        std::cout << "MyException caught" << std::endl;
-//        //std::cout << e.what() << std::endl;
-//    }
-//}
+class A {
+public:
+void foo() {
+		cout << "A" << endl;
+	}
+};
+class B :public A{
+public:
+void foo() {
+		cout << "B" << endl;
+	}
+};
+int main()
+{
+	A* a ;
+	B b;
+	a = &b;
+	a->foo(); //ç»“æœä¸ºB
+	return 0;
+}
+
+class Shape {
+protected:
+	int width, height;
+public:
+	Shape(int a = 0, int b = 0)
+	{
+		width = a;
+		height = b;
+	}
+	int area()
+	{
+		cout << "Parent class area :" << endl;
+		return 0;
+	}
+	virtual ~Shape() { cout << "shape::decontor!\n"; };
+};
+class Rectangle : public Shape {
+public:
+	Rectangle(int a = 0, int b = 0) :Shape(a, b) { }
+	virtual int area()
+	{
+		cout << "Rectangle class area :" << endl;
+		return (width * height);
+	}
+	 ~Rectangle() { cout << "Rec::decontor!\n"; };
+};
+class Triangle : public Shape {
+public:
+	Triangle(int a = 0, int b = 0) :Shape(a, b) { }
+	virtual int area()
+	{
+		cout << "Triangle class area :" << endl;
+		return (width * height / 2);
+	}
+	 ~Triangle() { cout << "Tri::decontor!\n"; };
+};
+
+void foo(int a, int b)
+{
+	cout << 1 << endl;
+}
+
+void foo(double a, double b)
+{
+	cout << 2 << endl;
+}
+
+int main()
+{
+	Shape* shape=new Rectangle(10, 7);
+	shape->area();
+	delete shape;
+
+	foo(1, 2.0);
+	return 0;
+}
+
+#include <iostream>
+#include <exception>
+using namespace std;
+
+struct MyException : public exception
+{
+   const char* what() const throw ()
+   {
+       return "C++ Exception";
+   }
+};
+
+class ex :public exception
+{
+
+};
+
+int main()
+{
+   try
+   {
+       throw MyException();
+   }
+
+   catch (ex& e)
+   {
+       //å…¶ä»–çš„é”™è¯¯
+       cout << 1 << endl;
+   }
+
+   catch (...)//å¯ä»¥æ•æ‰æ‰€æœ‰ç±»å‹çš„å¼‚å¸¸æƒ…å†µ
+   {
+       std::cout << "MyException caught" << std::endl;
+       //std::cout << e.what() << std::endl;
+   }
+}
 
 #include<iostream>
 #include<string>
@@ -324,7 +324,7 @@ public:
 	friend ostream& operator<<( ostream& out, const C& c);
 	friend istream& operator>>( istream& in ,  C& c);
 
-	C&/*Òª¸Ä±ä×Ô¼º*/ operator=(const C& that)
+	C&/*è¦æ”¹å˜è‡ªå·±*/ operator=(const C& that)
 	{
 		if (this == &that)
 			return *this;
@@ -332,20 +332,20 @@ public:
 		return *this;
 	}
 
-	C &/*Òª¸Ä±ä×Ô¼º*/ operator++()//ÖØÔØ++i
+	C &/*è¦æ”¹å˜è‡ªå·±*/ operator++()//é‡è½½++i
 	{
 		this->i++;
-		return *this;/*·µ»Ø×Ô¼º*/
+		return *this;/*è¿”å›è‡ªå·±*/
 	}
 
-	C operator++(int)//ÖØÔØi++
+	C operator++(int)//é‡è½½i++
 	{
 		C old(*this);
-		++(*this);/*¸Ä±äÁË×Ô¼º*/
-		return old;/*·µ»ØÀÏµÄ*/
+		++(*this);/*æ”¹å˜äº†è‡ªå·±*/
+		return old;/*è¿”å›è€çš„*/
 	}
 
-	int& operator[](int i)/*Òª¸Ä±ä×Ô¼ºËùÒÔ·µ»ØÒıÓÃ*/
+	int& operator[](int i)/*è¦æ”¹å˜è‡ªå·±æ‰€ä»¥è¿”å›å¼•ç”¨*/
 	{
 		return arr[i];
 	}
@@ -353,12 +353,12 @@ public:
 };
 ostream& operator<<(ostream& out, const C& c)
 {
-	cout << c.i << endl;//Êä³ö
+	cout << c.i << endl;//è¾“å‡º
 	return out;
 }
 istream& operator>>(istream& in, C& c)
 {
-	cin >> c.i;//ÊäÈë
+	cin >> c.i;//è¾“å…¥
 	return in;
 }
 
@@ -367,15 +367,15 @@ template<class T,int len>
 class D
 {
 public:
-	static vector<T*>/*ÀàĞÍ*/ arr[len];
+	static vector<T*>/*ç±»å‹*/ arr[len];
 	void print();
 };
 
 template<class T, int len>
-vector<T*>/*ÀàĞÍ*/ D<T, len>::/*×÷ÓÃÓò*/ arr[len];
+vector<T*>/*ç±»å‹*/ D<T, len>::/*ä½œç”¨åŸŸ*/ arr[len];
 
 template<class T, int len>
-void D<T, len>::/*º¯ÊıÒ²Òª¼ÓÉÏ×÷ÓÃÓò*/print()
+void D<T, len>::/*å‡½æ•°ä¹Ÿè¦åŠ ä¸Šä½œç”¨åŸŸ*/print()
 {
 	cout << "zmqsb" << endl;
 }
